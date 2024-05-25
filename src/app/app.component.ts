@@ -20,4 +20,8 @@ export class AppComponent {
     let col = collection(this.firestore,'logins');
     addDoc(col, {fecha: new Date(), "email":'hola'});
   }
+
+  prueba2() {
+    
+  }
 }
