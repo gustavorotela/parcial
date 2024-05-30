@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0; /* Un color de fondo claro para destacar los recuadros blancos */
+  }
+  
+  .list,
+  .details {
+    width: 100%;
+    max-width: 800px; /* Ajusta el valor según el tamaño deseado */
+    margin: 0 auto; /* Centra los elementos horizontalmente */
+  }
+  
+  .details {
+    display: flex;
+    flex-direction: row; /* Organiza los elementos en una fila */
+    justify-content: space-between;
+  }
+  
+  .details .detail-repartidor,
+  .details .detail-pais {
+    flex: 1; /* Cada componente toma el mismo ancho */
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .details .detail-pais {
+    margin-left: 1rem; /* Espacio entre los recuadros */
+  }

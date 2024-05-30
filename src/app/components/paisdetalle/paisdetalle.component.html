@@ -1,0 +1,7 @@
+<div class="container mx-auto py-6">
+    <h1 class="text-2xl font-bold mb-4">Detalle del País</h1>
+    <div *ngIf="country">
+      <img [src]="country.flags.png" alt="{{ country.name.common }} flag" class="mb-4">
+      <p>País: {{ country.name.common }}</p>
+    </div>
+  </div>

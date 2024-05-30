@@ -15,13 +15,4 @@ export class AppComponent {
   constructor(private firestore:Firestore) {
 
   }
-
-  prueba(){
-    let col = collection(this.firestore,'logins');
-    addDoc(col, {fecha: new Date(), "email":'hola'});
-  }
-
-  prueba2() {
-    
-  }
 }

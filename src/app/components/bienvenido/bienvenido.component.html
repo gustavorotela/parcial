@@ -1,0 +1,10 @@
+<app-menu></app-menu>
+<div class="main-content flex flex-col items-center p-6 bg-gray-100 rounded-lg shadow-md">
+  <img *ngIf="user" [src]="user.avatar_url" alt="Avatar" class="w-24 h-24 rounded-full shadow-lg">
+  <h1 *ngIf="user" class="mt-4 text-xl font-bold text-gray-900">{{ user.name }}</h1>
+  <p *ngIf="user" class="text-gray-700">{{ user.login }}</p>
+  <p *ngIf="user" class="mt-2 text-gray-600">Repositorios: {{ user.public_repos }}</p>
+  <a *ngIf="user" [href]="user.html_url" target="_blank" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600">
+    Ver perfil en GitHub
+  </a>
+</div>

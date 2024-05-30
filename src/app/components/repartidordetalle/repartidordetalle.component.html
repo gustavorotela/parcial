@@ -1,0 +1,11 @@
+<div class="container mx-auto py-6">
+    <h1 class="text-2xl font-bold mb-4">Detalle del Repartidor</h1>
+    <div *ngIf="repartidor">
+      <p>DNI: {{ repartidor.dni }}</p>
+      <p>Nombre: {{ repartidor.nombre }}</p>
+      <p>Edad: {{ repartidor.edad }}</p>
+      <p>Capacidad de Transporte: {{ repartidor.capacidadTransporte }} unidades</p>
+      <p>Unidad Propia: {{ repartidor.unidadPropia ? 'Sí' : 'No' }}</p>
+      <p>País: {{ repartidor.pais }}</p>
+    </div>
+  </div>
