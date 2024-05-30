@@ -1,0 +1,30 @@
+<div class="bg-white p-6 rounded shadow mb-6">
+    <h2 class="text-2xl font-bold mb-4">Crear HELADO</h2>
+    <form [formGroup]="heladoForm" (ngSubmit)="onSubmit()">
+      <div class="mb-4">
+        <label class="block text-gray-700">Nombre</label>
+        <input formControlName="nombre" type="text" class="w-full p-2 border rounded">
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700">Tipo</label>
+        <select formControlName="tipo" class="w-full p-2 border rounded">
+          <option value="">Seleccione un tipo</option>
+          <option value="Agua">Agua</option>
+          <option value="Crema">Crema</option>
+        </select>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700">Precio</label>
+        <input formControlName="precio" type="number" class="w-full p-2 border rounded">
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700">Peso (gramos)</label>
+        <input formControlName="peso" type="number" class="w-full p-2 border rounded">
+      </div>
+      <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded">Crear HELADO</button>
+
+      <div *ngIf="errorMessage" class="mt-4 p-4 text-red-700 bg-red-200 rounded-lg">
+        {{ errorMessage }}
+      </div>
+    </form>
+  </div>

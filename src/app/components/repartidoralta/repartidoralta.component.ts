@@ -41,7 +41,7 @@ export class RepartidoraltaComponent {
 
   async onSubmit() {
     this.errorMessage = '';
-    
+
     if (this.repartidorForm.valid) {
       const formData = {
         ...this.repartidorForm.value,
@@ -58,7 +58,6 @@ export class RepartidoraltaComponent {
             if (snapshot.empty) {
               addDoc(col, formData);
               console.log('Repartidor added successfully');
-              //this.router.navigate(['/some-route']); // Redirige a alguna ruta después de guardar
             } else {
               this.errorMessage = 'El repartidor ya existe';
             }

@@ -1,0 +1,7 @@
+.error-message {
+    top: 4rem; 
+  }
+  
+  nav + .pt-24 {
+    padding-top: 6rem;
+  }

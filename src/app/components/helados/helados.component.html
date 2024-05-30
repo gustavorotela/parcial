@@ -1,0 +1,29 @@
+<div class="helados-container">
+    <app-menu></app-menu>
+      <div class="text-center">
+        <h1 class="text-3xl font-bold mb-4">Salen HELADOS</h1>
+        <p class="text-gray-600 mb-6">Administrar helados disponibles</p>
+      </div>
+    
+      <app-heladoalta (heladoAdded)="addHelado($event)"></app-heladoalta>
+    
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div *ngFor="let helado of helados" class="bg-white p-4 rounded shadow">
+          <h2 class="text-xl font-bold mb-2">{{ helado.nombre }}</h2>
+          <p>Tipo: {{ helado.tipo }}</p>
+          <p>Precio: ${{ helado.precio }}</p>
+          <p>Peso: {{ helado.peso }} gramos</p>
+          <div class="flex mt-4 space-x-2">
+            <button (click)="selectHelado(helado)" class="bg-blue-500 text-white p-2 rounded">Modificar</button>
+            <app-heladoborrar [helado]="helado" (heladoDeleted)="onHeladoDeleted()"></app-heladoborrar>
+          </div>
+        </div>
+      </div>
+    
+      <app-heladoeditar
+      *ngIf="selectedHelado"
+      [helado]="selectedHelado"
+      (heladoUpdated)="updateHelado($event)"
+      (cancelEdit)="cancelEdit()">
+    </app-heladoeditar>
+    </div>
